@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<title>Aprendiendo JavaScript</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/calendar-blue.css">
+	<script type="text/javascript" src="js/script.js"></script>
+	
+	<script type="text/javascript" src="js/calendar.js"></script>
+	<script type="text/javascript" src="js/calendar-es.js"></script>
+	<script type="text/javascript" src="js/calendar-setup.js"></script>	
+
+	<script type="text/javascript" src="js/overlib.js"><!-- //overLIB (c) Erik Bosrup --></script>
+	<!-- <script type="text/javascript"></script> -->
+</head>
+<body>
+	<section id="principal">
+	<noscript>
+			<p>Loading...
+  			<br>Bienvenido a Mi Sitio
+  			<br>La página que estás viendo requiere para su funcionamiento el uso de JavaScript.
+			<br>Si lo has deshabilitado intencionadamente, por favor vuelve a activarlo.</p>
+	</noscript>
+	<header>
+		<h1>Ejercicios resueltos de JavaScript</h1>
+	</header>
+		<article id="inicio" class="ini">
+			<h2>Asi es como comenzamos</h2>
+			<p>	Estas son las practicas que he realizado en mi camino a aprender JavaScript para el Front de una página web. Los ejercicios que realizo los obtuve de <a href="http://www.librosweb.es/javascript/" target="_blank">LIBROSWEB.</a> Por lo que los ejercicios realizados son de dicho tutorial.</p>
+			<p>Tambien ire agregando ejercicio echos por mi cuenta, espero que sean de su agrado.</p>
+		</article>
+		<article id ="Capitulo 2" class="ejercicios">
+			<h2>Capitulo 2 - El primer script</h2>
+			<div class="ejer"><h3>Ejercicio 1</h3>
+     		   Modificar el primer script para que:
+		       <ol>
+			       <li>Todo el código JavaScript se encuentre en un archivo externo llamado <code>codigo.js</code> y el script siga funcionando de la misma manera.</li>
+				   <li>Después del primer mensaje, se debe mostrar otro mensaje que diga <em>"Soy el primer script"</em></li>
+				   <li>Añadir algunos comentarios que expliquen el funcionamiento del código</li>
+				   <li>Añadir en la página XHTML un mensaje de aviso para los navegadores que no tengan activado el soporte de JavaScript</li>
+			   </ol>
+			   <br><input type="button" value="Ver solucion" onclick="ejercicio1();" class="boton"/>
+			</div>
+		</article>
+		<article id ="Capitulo 3" class="ejercicios">
+			<h2>Capitulo 3 - Programación básica</h2>
+			<div class="ejer"><h3>Ejercicio 2</h3>
+     		   Modificar el primer script del capítulo anterior para que:
+		       <ol>
+				   <li>El mensaje que se muestra al usuario se almacene en una variable llamada <code>mensaje</code> y el funcionamiento del script sea el mismo.</li>
+				   <li>El mensaje mostrado sea el de la siguiente imagen:</li>
+			   </ol>
+			   <div class="figura" id="figura_3_1">
+    		   		<img src="imagenes/cap3_fig1.gif" alt="Nuevo mensaje que debe mostrar el script" >
+		       </div>
+    		   	<p><strong>Figura 3.1</strong> Nuevo mensaje que debe mostrar el script</p>
+			   <br><br><input type="button" value="Ver solucion" onclick="ejercicio2();" class="boton"/>
+			</div>
+			<div class="ejer"><h3>Ejercicio 3</h3>
+				Crear un array llamado <code>meses</code> y que almacene el nombre de los doce meses del año. Mostrar por pantalla los doce nombres utilizando la función <code>alert()</code>.
+				<br /><br /><input type="button" value="Ver solucion" onClick="ejercicio3();" class="boton"/>
+			</div>
+			<div class="ejer"><h3>Ejercicio 4</h3>
+				A partir del siguiente array que se proporciona: <code>var valores = [true, 5, false, "hola", "adios", 2];</code>
+				<ol>
+					<li>Determinar cuan de los dos elementos de texto es mayor</li>
+					<li>Utilizando exclusivamente los dos valores booleanos del array, determinar los operadores necesarios para obtener un resultado <code>true</code> y otro resultado <code>false</code></li>
+					<li>Determinar el resultado de las cinco operaciones matematicas realizadas con los dos elementos numéricos</li>
+				</ol>
+				<br><input type="button" value="Ver solucion" onClick="ejercicio4();" class="boton"/>
+			</div>
+			<div class="ejer"><h3>Ejercicio 5</h3>
+				Completar las condiciones de los <code>if</code> del siguiente script para que los mensajes de los <code>alert()</code> se muestren siempre de forma correcta:
+<pre class="boxCode">
+   <span class="svar">var</span> numero1 <span class="simbolos">=</span> 5;
+   <span class="svar">var</span> numero2 <span class="simbolos">=</span> 8;
+   		 
+   <span class="sif">if</span>(...) {
+     <span class="salert">alert</span>(<span class="sstring">"numero1 no es mayor que numero2"</span>);
+   }
+   <span class="sif">if</span>(...) {
+	 <span class="salert">alert</span>(<span class="sstring">"numero2 es positivo"</span>);
+   }
+   <span class="sif">if</span>(...) {
+     <span class="salert">alert</span>(<span class="sstring">"numero1 es negativo o distinto de cero"</span>);
+   }
+   <span class="sif">if</span>(...) {
+     <span class="salert">alert</span>(<span class="sstring">"Incrementar en 1 unidad el valor de
+            numero1 no lo hace mayor o igual que numero2"</span>);
+   }
+</pre>
+				<br><input type="button" value="Ver solucion" onClick="ejercicio5();" class="boton"/>
+			</div>
+			<div class="ejer"><h3>Ejercicio 6</h3>
+				El cálculo de la letra del Documento Nacional de Identidad (DNI) es un proceso matemático sencillo que se basa en obtener el resto de la división entera del número de DNI y el número 23. A partir del resto de la división, se obtiene la letra seleccionándola dentro de un array de letras.
+				<br><br>El array de letras es:
+				<br><br><code>var letras = ['T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 'D', 'X', 'B', 'N', 'J', 'Z', 'S', 'Q', 'V', 'H', 'L', 'C', 'K', 'E', 'T'];</code><br>
+				<br>Por tanto si el resto de la división es <code>0</code>, la letra del DNI es la <code>T</code> y si el resto es <code>3</code> la letra es la <code>A</code>. Con estos datos, elaborar un pequeño script que:
+				<ol>
+					<li>Almacene en una variable el número de DNI indicado por el usuario y en otra variable la letra del DNI que se ha indicado. (Pista: si se quiere pedir directamente al usuario que indique su número y su letra, se puede utilizar la función <code>prompt()</code>)</li>
+					<li>En primer lugar (y en una sola instrucción) se debe comprobar si el número es menor que <code>0</code> o mayor que <code>99999999</code>. Si ese es el caso, se muestra un mensaje al usuario indicando que el número proporcionado no es válido y el programa no muestra más mensajes.</li>
+					<li>Si el número es válido, se calcula la letra que le corresponde según el método explicado anteriormente.</li>
+					<li>Una vez calculada la letra, se debe comparar con la letra indicada por el usuario. Si no coinciden, se muestra un mensaje al usuario diciéndole que la letra que ha indicado no es correcta. En otro caso, se muestra un mensaje indicando que el número y la letra de DNI son correctos.</li>
+				</ol>
+				<br><input class="boton" type="button" value="Ver solucion" onClick="ejercicio6();" />
+			</div>
+			<div class="ejer"><h3>Ejercicio 7</h3>
+				El factorial de un número entero <code>n</code> es una operación matemática que consiste en multiplicar todos los factores <code>n x (n-1) x (n-2) x ... x 1</code>. Así, el factorial de <code>5</code> (escrito como <code>5!</code>) es igual a: <code>5! = 5 x 4 x 3 x 2 x 1 = 120</code>
+				<br><br>Utilizando la estructura <code>for</code>, crear un script que calcule el factorial de un número entero.<br>
+				<br><input class="boton" type="button" value="Ver solucion" onClick="ejercicio7();" />
+			</div>
+		</article>
+		<article id ="Capitulo 4" class="ejercicios">
+			<h2>Capitulo 4 - Programación avanzada</h2>
+			<div class="ejer"><h3>Ejercicio 8</h3>
+     		   Escribir el código de una función a la que se pasa como parámetro un número entero y devuelve como resultado una cadena de texto que indica si el número es par o impar. Mostrar por pantalla el resultado devuelto por la función.
+			   <br><br><input class="boton" type="button" value="Ver solucion" onclick="ejercicio8();" />
+			</div>
+			<div class="ejer"><h3>Ejercicio 9</h3>
+				Definir una función que muestre información sobre una cadena de texto que se le pasa como argumento. A partir de la cadena que se le pasa, la función determina si esa cadena está formada sólo por mayúsculas, sólo por minúsculas o por una mezcla de ambas.
+				<br><br><input class="boton" type="button" value="Ver solucion" onclick="ejercicio9();" />
+			</div>
+			<div class="ejer"><h3>Ejercicio 10</h3>
+				Definir una función que determine si la cadena de texto que se le pasa como parámetro es un palíndromo, es decir, si se lee de la misma forma desde la izquierda y desde la derecha. Ejemplo de palíndromo complejo: "La ruta nos aporto otro paso natural".
+				<br><br><input class="boton" type="button" value="Ver solucion" onclick="ejercicio10();" />
+			</div>
+		</article>
+		<article id ="Capitulo 5" class="ejercicios">
+			<h2>Capitulo 5 - DOM</h2>
+			<div class="ejer"><h3>Ejercicio 11</h3>
+     		   A partir de la página web proporcionada y utilizando las funciones DOM, mostrar por pantalla la siguiente información:
+		       <ol>
+			       <li>Número de enlaces de la página.</li>
+				   <li>Dirección a la que enlaza el penúltimo enlace.</li>
+				   <li>Número de enlaces que enlazan a http://prueba</li>
+				   <li>Número de enlaces del tercer parrafo.</li>
+			   </ol>
+			   <div id="info"></div><br>
+			   <a class="pag" href="ejercicio11.html" target="_blank" >Ver página.</a>
+			   <br><br><input class="boton" type="button" value="Ver solucion" onclick="ejercicio11();" />
+			</div>
+			<div id="ejerc11" class="ventanaOculta">
+				<p>Lorem ipsum dolor sit amet, <a href="http://prueba">consectetuer adipiscing elit</a>.
+				   Sed mattis enim vitae orci. Phasellus libero. Maecenas nisl arcu, 
+				   consequat congue, commodo nec, commodo ultricies, turpis. Quisque sapien
+				   nunc, posuere vitae, rutrum et, luctus at, pede. Pellentesque massa 
+				   ante, ornare id, aliquam vitae, ultrices porttitor, pede. Nullam sit 
+				   amet nisl elementum elit convallis malesuada. Phasellus magna sem, 
+				   semper quis, faucibus ut, rhoncus non, mi. <a href="http://prueba2">Fusce porta</a>.
+				   Duis pellentesque, felis eu adipiscing ullamcorper, odio urna consequat
+				   arcu, at posuere ante quam non dolor. Lorem ipsum dolor sit amet, 
+				   consectetuer adipiscing elit. Duis scelerisque. Donec lacus neque, 
+				   vehicula in, eleifend vitae, venenatis ac, felis. Donec arcu. Nam sed 
+				   tortor nec ipsum aliquam ullamcorper. Duis accumsan metus eu urna. 
+				   Aenean vitae enim. Integer lacus. Vestibulum venenatis erat eu odio. 
+				   Praesent id metus.</p>
+
+				<p>Aenean at nisl. Maecenas egestas dapibus odio. Vestibulum ante ipsum 
+				   primis in faucibus orci luctus et ultrices posuere cubilia Curae; Proin 
+				   consequat auctor diam. <a href="http://prueba">Ut bibendum blandit est</a>.
+				   Curabitur vestibulum. Nunc malesuada porttitor sapien. Aenean a lacus 
+				   et metus venenatis porta. Suspendisse cursus, sem non dapibus tincidunt,
+				   lorem magna porttitor felis, id sodales dolor dolor sed urna. Sed 
+				   rutrum nulla vitae tellus. Sed quis eros nec lectus tempor lacinia. 
+				   Aliquam nec lectus nec neque aliquet dictum. Etiam <a href="http://prueba3">consequat sem quis massa</a>.
+				   Donec aliquam euismod diam. In magna massa, mattis id, pellentesque sit
+				   amet, porta sit amet, lectus. Curabitur posuere. Aliquam in elit. Fusce
+				   condimentum, arcu in scelerisque lobortis, ante arcu scelerisque mi, at
+				   cursus mi risus sed tellus.</p>
+
+				<p>Donec sagittis, nibh nec ullamcorper tristique, pede velit feugiat 
+				   massa, at sollicitudin justo tellus vitae justo. Vestibulum aliquet, 
+				   nulla sit amet imperdiet suscipit, nunc erat laoreet est, a <a href="http://prueba">aliquam leo odio sed sem</a>.
+				   Quisque eget eros vehicula diam euismod tristique. Ut dui. Donec in 
+				   metus sed risus laoreet sollicitudin. Proin et nisi non arcu sodales 
+				   hendrerit. In sem. Cras id augue eu lorem dictum interdum. Donec 
+				   pretium. Proin <a href="http://prueba4">egestas</a>
+				   adipiscing ligula. Duis iaculis laoreet turpis. Mauris mollis est sit 
+				   amet diam. Curabitur hendrerit, eros quis malesuada tristique, ipsum 
+				   odio euismod tortor, a vestibulum nisl mi at odio. <a href="http://prueba5">Sed non lectus non est pellentesque</a> auctor.</p>
+		    </div>
+		    <div class="ejer"><h3>Ejercicio 12</h3>
+		    	Completar el código JavaScript proporcionado para que cuando se pinche sobre el enlace se muestre completo el contenido de texto. Además, el enlace debe dejar de mostrarse después de pulsarlo por primera vez. La acción de pinchar sobre un enlace forma parte de los "Eventos" de JavaScript que se ven en el siguiente capítulo. En este ejercicio, sólo se debe saber que al pinchar sobre el enlace, se ejecuta la función llamada <code>muestra()</code>.
+		    	<div id="ejer12" name="destino" class="ventanaOculta">
+		    		<p id="texto">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed mattis enim vitae orci. Phasellus libero. Maecenas nisl arcu, consequat congue, commodo nec, commodo ultricies, turpis. Quisque sapien nunc, posuere vitae, rutrum et, luctus at, pede. Pellentesque massa ante, ornare id, aliquam vitae, ultrices porttitor, pede. <span id="adicional" class="oculto">Nullam sit amet nisl elementum elit convallis malesuada. Phasellus magna sem, semper quis, faucibus ut, rhoncus non, mi. Duis pellentesque, felis eu adipiscing ullamcorper, odio urna consequat arcu, at posuere ante quam non dolor. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Duis scelerisque. Donec lacus neque, vehicula in, eleifend vitae, venenatis ac, felis. Donec arcu. Nam sed tortor nec ipsum aliquam ullamcorper. Duis accumsan metus eu urna. Aenean vitae enim. Integer lacus. Vestibulum venenatis erat eu odio. Praesent id metus.</span></p>
+		    		<input class="boton" type="button" value="Ocultar" class="oculto" id="botonOculto" onClick="ocultar();">
+					<a id="enlace" href="#destino" onclick="ejercicio12(); return false;">Seguir leyendo</a>
+		    	</div><br>
+			   <br><a class="pag" href="ejercicio12.html" target="_blank">Ver página.</a>
+			   <br><br><input class="boton" type="button" value="Ver solucion" onclick="mostrar();"  id="botonVer"/>
+		    </div>
+		    <div class="ejer"><h3>Ejercicio 13</h3>
+		    	Completar el código JavaScript proporcionado para que se añadan nuevos elementos a la lista cada vez que se pulsa sobre el botón. Utilizar las funciones DOM para crear nuevos nodos y añadirlos a la lista existente. Al igual que sucede en el ejercicio anterior, la acción de pinchar sobre un botón forma parte de los "Eventos" de JavaScript que se ven en el siguiente capítulo. En este ejercicio, sólo se debe saber que al pinchar sobre el botón, se ejecuta la función llamada <code>agrega()</code>.
+		    	<div class="ventanaOculta" id="ejer13">
+		    		 <ul id="lista">
+				      <li>Lorem ipsum dolor sit amet</li>
+				      <li>Consectetuer adipiscing elit</li>
+				      <li>Sed mattis enim vitae orci</li>
+				      <li>Phasellus libero</li>
+				      <li>Maecenas nisl arcu</li>
+				    </ul>
+     
+    				<input class="boton" type="button" value="Añadir elemento 1" onclick="agrega1();">
+    				<input class="boton" type="button" value="Añadir elemento 2" onclick="agrega2();">
+		    	</div>
+		    	<br><br><a class="pag" href="ejercicio13.html" target="_blank">Ver página.</a>
+		    	<br><br><input class="boton" type="button" value="Ver solucion" onclick="ejercicio13();">
+		    </div>
+		</article>
+		<article id ="Capitulo 6" class="ejercicios" >
+			<h2>Capitulo 6 - Eventos</h2>
+			<div class="ejer"><h3>Ejercicio 14</h3>
+     		   A partir de la página web proporcionada, completar el código JavaScript para que:
+		       <ol>
+			       <li>Cuando se pinche sobre el primer enlace, se oculte su sección relacionada</li>
+				   <li>Cuando se vuelva a pinchar sobre el mismo enlace, se muestre otra vez esa sección de contenidos</li>
+				   <li>Completar el resto de enlaces de la página para que su comportamiento sea idéntico al del primer enlace</li>
+				   <li>Cuando una sección se oculte, debe cambiar el mensaje del enlace asociado (pista: propiedad <code>innerHTML</code>)</li>
+			   </ol>
+			   <div id="ejer14" class="ventanaOculta" name="divEjer14">
+			   		<p id="contenidos_1">[1] Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed mattis enim vitae orci. Phasellus libero. Maecenas nisl arcu, consequat congue, commodo nec, commodo ultricies, turpis. Quisque sapien nunc, posuere vitae, rutrum et, luctus at, pede. Pellentesque massa ante, ornare id, aliquam vitae, ultrices porttitor, pede. Nullam sit amet nisl elementum elit convallis malesuada. Phasellus magna sem, semper quis, faucibus ut, rhoncus non, mi. Duis pellentesque, felis eu adipiscing ullamcorper, odio urna consequat arcu, at posuere ante quam non dolor. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Duis scelerisque.</p>
+    				<a id="enlace_1" href="#destino" onclick="muestraOculta('1'); return false;">Ocultar contenido</a>
+     		    	<br/>     
+				    <p id="contenidos_2">[2] Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed mattis enim vitae orci. Phasellus libero. Maecenas nisl arcu, consequat congue, commodo nec, commodo ultricies, turpis. Quisque sapien nunc, posuere vitae, rutrum et, luctus at, pede. Pellentesque massa ante, ornare id, aliquam vitae, ultrices porttitor, pede. Nullam sit amet nisl elementum elit convallis malesuada. Phasellus magna sem, semper quis, faucibus ut, rhoncus non, mi. Duis pellentesque, felis eu adipiscing ullamcorper, odio urna consequat arcu, at posuere ante quam non dolor. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Duis scelerisque.</p>
+				    <a id="enlace_2" href="#divEjer14" onclick="muestraOculta('2'); return false;">Ocultar contenido</a>				     
+				    <br/>
+				    <p id="contenidos_3">[3] Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed mattis enim vitae orci. Phasellus libero. Maecenas nisl arcu, consequat congue, commodo nec, commodo ultricies, turpis. Quisque sapien nunc, posuere vitae, rutrum et, luctus at, pede. Pellentesque massa ante, ornare id, aliquam vitae, ultrices porttitor, pede. Nullam sit amet nisl elementum elit convallis malesuada. Phasellus magna sem, semper quis, faucibus ut, rhoncus non, mi. Duis pellentesque, felis eu adipiscing ullamcorper, odio urna consequat arcu, at posuere ante quam non dolor. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Duis scelerisque.</p>
+				    <a id="enlace_3" href="#divEjer14" onclick="muestraOculta('3'); return false;">Ocultar contenido</a><br><br>
+			   </div>
+			   <br><a class="pag" href="ejercicio14.html" target="_blank">Ver página.</a>
+		       <br><br><input class="boton" type="button" value="Ver solucion" onclick="ejercicio14();">
+			</div>
+			<div class="ejer"><h3>Ejercicio 15</h3>
+				Completar el código JavaScript proporcionado para que:
+				<ol>
+					<li>
+						Al mover el ratón en cualquier punto de la ventana del navegador, se muestre la posición del puntero respecto del navegador y respecto de la página: 
+						<div class="figura" id="figura_6_1">
+							<img src="imagenes/cap6_fig1.gif" alt="Información que se muestra para los eventos del ratón" >
+						</div>
+						<p><strong>Figura 6.1</strong> Información que se muestra para los eventos del ratón</p>
+						Para mostrar los mensajes, utilizar la función <code>muestraInformacion()</code> deduciendo su funcionamiento a partir de su código fuente.
+					</li>
+					<li>
+						Al pulsar cualquier tecla, el mensaje mostrado debe cambiar para indicar el nuevo evento y su información asociada: 
+						<div class="figura" id="figura_6_2">
+							<img src="imagenes/cap6_fig2.gif" alt="Información que se muestra para los eventos del teclado">
+						</div>
+						<p><strong>Figura 6.2</strong> Información que se muestra para los eventos del teclado</p>
+					</li>
+					<li>
+						Añadir la siguiente característica al script: cuando se pulsa un botón del ratón, el color de fondo del cuadro de mensaje debe ser amarillo (<code>#FFFFCC</code>) y cuando se pulsa una tecla, el color de fondo debe ser azul (<code>#CCE6FF</code>). Al volver a mover el ratón, el color de fondo vuelve a ser blanco. 
+						<div class="figura" id="figura_6_3">
+							<img src="imagenes/cap6_fig3.gif" alt="El color de fondo del cuadro de información cambia en función del tipo de evento">
+						</div>
+						<p><strong>Figura 6.3</strong> El color de fondo del cuadro de información cambia en función del tipo de evento</p>
+					</li>
+				</ol>
+				<div class="ventanaOculta" id="ejer15" name="divEjer15"></div>
+				<a class="pag" href="ejercicio15.html" target="_blank">Ver página.</a>
+		       <br><br><input class="boton" type="button" value="Ver solucion" onclick="ejercicio15();">
+			</div>
+			<div class="ejer"><h3>Ejercicio 16</h3>
+				Crear un script que informe al usuario en que zona de la pantalla ha pulsado el ratón. Las zonas definidas son las siguientes: izquierda arriba, izquierda abajo, derecha arriba y derecha abajo. Para determinar el tamaño de la ventana del navegador, utilizar la función <code>tamanoVentanaNavegador()</code> proporcionada.
+				<div class="ventanaOculta" id="ejer16"><br></div>
+				<br><br><a class="pag" href="ejercicio16.html" target="_blank">Ver página.</a>
+				<br><br><input class="boton" type="button" value="Ver solucion" onclick="ejercicio16();">
+			</div>
+		</article>
+		<article id ="Capitulo 7" class="ejercicios">
+			<h2>Capitulo 7 - Formularios</h2>
+		<div class="ejemplo">
+			<p>Con este ejemplo podemos limitar el tamaño de caracteres de un <code>textarea</code></p>
+<pre class="boxCode">
+<span class="sfun">function</span> <span class="snamefun">limita</span>(<span class="sargs">maximoCaracteres</span>){
+   <span class="svar">var</span> elemento <span class="simbolos">=</span> <span class="sdom">document</span>.<span class="sdom">getElementById</span>(<span class="sstring">"texto"</span>);
+   <span class="sif">if</span>(elemento.<span class="sdom">value</span>.<span class="sdom">length</span> <span class="simbolos">>=</span> maximoCaracteres){
+   <span class="sif">return</span> <span class="sbool">false</span>;
+   }<span class="sif">else</span>{
+      <span class="sif">return</span> <span class="sbool">true</span>;
+   }
+
+}
+
+</pre>
+		</div>
+			<div class="ejer"><h3>Ejercicio 17</h3>
+     		   Mejorar el ejemplo anterior indicando en todo momento al usuario el número de caracteres que aún puede escribir. Además, se debe permitir pulsar las teclas <code>Backspace</code>, <code>Supr.</code> y las flechas horizontales cuando se haya llegado al máximo número de caracteres.
+     		   <div id="ejer17" class="ventanaOculta">
+     		   		<h4>Máximo 100 caracteres</h4>
+     		   		<textarea id="textare" onkeypress="return limita(event, 100);" onkeyup="actualizaContador(100)" rows="6" cols="30"></textarea>
+     		   		<span id="contador">100</span>
+     		   		<!-- <textarea id="textare" onkeypress="return limita(100);"><span id="contador"></span></textarea> -->
+     		   </div>
+			   <br><br><input class="boton" type="button" value="Ver solucion" onclick="ejercicio17();" />
+			</div>
+		</article>
+		<article id ="Capitulo 8" class="ejercicios">
+			<h2>Capitulo 8 - Otras Utilidades</h2>
+			<div class="ejemplo"><h3>Ejercicios </h3>
+				Aqui puedes ver la hora.
+				<div id="reloj">
+					<script type="text/javascript">reloj();</script>
+				</div>
+				<div>
+					<br>Calendario...
+					<br>Introduce la fecha pulsando sobre la imagen del calendario
+					<br><input type="text" name="date" id="fecha" readoly="readoly" />
+					<img src="imagenes/img.gif" id="selector" />
+				</div>
+			</div>
+			<div class="ejer"><h3>Ejercicio 18</h3>
+     		   Mejorar el calendario creado añadiendo las opciones necesarias para que muestre el siguiente aspecto:
+     		   <div class="figura" id="figura_8_1">
+     		   	<img src="imagenes/cap8_fig1.gif" alt="Aspecto mejorado del calendario JavaScript">
+     		   </div>
+     		   <p><strong>Figura 8.1</strong> Aspecto mejorado del calendario JavaScript</p>
+		       <ol>
+			       <li>Que no se muestre el número de la semana en el calendario (pista: <code>weekNumbers</code>)</li>
+				   <li>Modificar el formato en el que se muestra la fecha seleccionada. El formato original es <code>21 / 08 / 2007</code> (indicado como <code>%d / %m / %Y</code>). El formato deseado es <code>Martes, 21 de Agosto de 2007</code> (pistas: <code>%A, %B</code>)</li>
+				   <li>El nuevo formato de fecha es mucho más agradable para los usuarios, pero más incómodo para los scripts que tienen que manejarlo. Afortunadamente, el calendario dispone de la posibilidad de guardar dos valores: un valor para mostrar a los usuarios y otro valor para que lo procesen los scripts. Cuando el usuario seleccione una fecha, la fecha con el formato original se debe almacenar en un campo oculto de formulario y el otro formato más largo debe mostrar al usuario en un elemento de tipo <code>&lt;span&gt;</code> (pistas: <code>displayArea, daFormat</code>)</li>
+			   </ol>
+			   <div id="ejer18" class="ventanaOculta">
+					<br>Calendario Modificado.
+					<!-- <br>Introduce la fecha pulsando sobre la imagen del calendario
+					<br><input type="text" name="date" id="calendarioM" readoly="readoly" />
+					<img src="imagenes/img.gif" id="selectorM" /> -->
+					<br><br><input type="hidden" name="fecha" id="fecha" />
+					<span onmouseover="this.style.cursor='pointer'; this.style.cursor='hand'; this.style.backgroundColor='#ff8'; this.style.textDecoration='none';"
+						  onmouseout="this.style.backgroundColor='#ffc'; this.style.textDecoration='underline';"
+					id="fecha_usuario">
+						Pincha aquí para seleccionar la fecha
+					</span>
+				</div>
+			   <br><input class="boton" type="button" value="Ver solucion" onclick="ejercicio18();" />
+			</div>
+			<div class="ejer"><h3>Ejercicio 19</h3>
+				Mejorar el <em>tooltip</em> propuesto añadiendo las siguientes características:
+				<ol>
+					<li>Que el <em>tooltip</em> no se muestre instantáneamente, sino que transcurra un cuarto de segundo hasta que se muestre (pista: <code>DELAY</code>)</li>
+					<li>Que exista una separación horizontal de 15 píxel entre el puntero del ratón y el <em>tooltip</em> (pista: <code>OFFSETX</code>)</li>
+					<li>Que el <em>tooltip</em> se muestre en la parte superior del puntero del ratón y no en la parte inferior (pista: <code>ABOVE</code>)</li>
+				</ol>
+				El nuevo aspecto del tooltip se muestra en la siguiente imagen: 
+				<div class="figura" id="figura_8_2">
+					<img src="imagenes/cap8_fig2.gif" alt="Nuevo aspecto del tooltip">
+				</div>
+				<p><strong>Figura 8.2</strong> Nuevo aspecto del tooltip</p>
+				<div id="ejer19" class="ventanaOculta">
+					<p>Javascript es un lenguaje que puede ser utilizado por profesionales y para quienes se inician 
+					   en el desarrollo y diseño de sitios web. No requiere de compilación ya que el lenguaje 
+					   funciona del lado del cliente, los <a href="#" onmouseover="return overlib('Se refiere a navegadores como Google Chrom, Mozilla, Internet Explorer, étc...');" onmouseout="return nd();">navegadores</a> son los encargados de interpretar estos códigos.
+					</p>
+				</div>
+				<input class="boton" type="button" value="Ver solucion" onclick="ejercicio19();" />
+			</div>
+		</article>
+		<footer>
+			<p>Creado por Daniel Bautista. Derechos reservados.</p>
+			<p>github: <a href="https://www.github.com/isaacBats" target="_blank">github.com/isaacBats</a></p>
+			<p>twitter: <a href="https://www.twitter.com/codeisaac" target="_blank">@codeisaac</a></p>
+		</footer>
+	</section>
+<!-- Para la galeria de imagenes se utilizan las librerias "prototype.js y scriptaculous.js" y
+     un css lightbox.css  para controlar el aspecto de Lighbox.
+
+	 Para insertar el efecto a la imagen se  utiliza la siguiente linea de codigo.
+	
+		<a href="images/image-1.jpg" rel="lightbox" title="Título de la imagen 1">Imagen 1</a>
+
+	 Donde la funcion rel="lightbox" es la que se encarga de invocar el codigo JS. si queremos
+	 enlazar varias imagenes se utiliza el siguiente criterio.
+
+		<a href="images/imagen-1.jpg" rel="lightbox[galeria1]">imagen #1</a>
+		<a href="images/imagen-2.jpg" rel="lightbox[galeria1]">imagen #2</a>
+		<a href="images/imagen-3.jpg" rel="lightbox[galeria1]">imagen #3</a>
+
+	 Todas las imágenes que tengan el mismo valor del atributo rel, automáticamente pasarán a 
+	 formar parte de una galería de fotos por la que se puede navegar hacia la siguiente o hacia 
+	 la anterior imagen
+-->
+</body>
+</html>
