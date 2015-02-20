@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <title>Ejercicio 16 - Información sobre eventos</title>   
+  <style type="text/css">
+    body {font-family: arial, helvetica;}
+    #info {width:160px; height : 150px; border:thin solid silver; padding:.5em; position:fixed;}
+    #info h1 {margin: 0;}
+  </style>
+   
+  <script type="text/javascript">
+    function informacion(elEvento) {
+      var evento = elEvento || window.event;
+     
+      var coordenadaX = evento.clientX;
+      var coordenadaY = evento.clientY;
+     
+      var dimensiones = tamanoVentanaNavegador();
+      var tamanoX = dimensiones[0];
+      var tamanoY = dimensiones[1];
+     
+      var posicionHorizontal = "";
+      var posicionVertical = "";
+     
+      if(coordenadaX > tamanoX/2) {
+        posicionHorizontal = "derecha";
+      }
+      else {
+        posicionHorizontal = "izquierda";
+      }
+     
+      if(coordenadaY > tamanoY/2) {
+        posicionVertical = "abajo";
+      }
+      else {
+        posicionVertical = "arriba";
+      }
+     
+      muestraInformacion(['Posicion', posicionHorizontal, posicionVertical]);
+    }
+     
+    function muestraInformacion(mensaje) {
+      document.getElementById("info").innerHTML = '<h1>'+mensaje[0]+'</h1>';
+      for(var i=1; i<mensaje.length; i++) {
+        document.getElementById("info").innerHTML += '<p>'+mensaje[i]+'</p>';
+      }
+    }
+     
+    function tamanoVentanaNavegador(){
+      //* Adaptada de http:*www.howtocreate.co.uk/tutorials/javascript/browserwindow
+      var dimensiones = [];
+     
+      if(typeof(window.innerWidth) == 'number') {
+        // No es IE
+        dimensiones = [window.innerWidth, window.innerHeight];
+      } else if(document.documentElement && (document.documentElement.clientWidth || document.documentElement.clientHeight)) {
+        //IE 6 en modo estandar (no quirks)
+        dimensiones = [document.documentElement.clientWidth, document.documentElement.clientHeight];
+      } else if(document.body && (document.body.clientWidth || document.body.clientHeight)) {
+        //IE en modo quirks
+        dimensiones = [document.body.clientWidth, document.body.clientHeight];
+      }
+     
+      return dimensiones;
+    }
+     
+    document.onclick = informacion;
+   
+  </script>
+</head>
+ 
+<body>
+ 
+<div id="info"></div>
+
+<!-- <p><h2>Ejemplos de tipos de input para forms</h2></p> 
+<br><input type="checkbox" value="condiciones" name="condiciones" id="condiciones"/> He leído y acepto las condiciones<br>
+<input type="checkbox" value="privacidad" name="privacidad" id="privacidad"/> He leído la política de privacidad<br>
+<input type="radio" value="si" name="pregunta" id="pregunta_si"/> SI<br>
+<input type="radio" value="no" name="pregunta" id="pregunta_no"/> NO<br>
+<input type="radio" value="nsnc" name="pregunta" id="pregunta_nsnc"/> NS/NC<br> -->
+ 
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+ 
+</body>
+</html>

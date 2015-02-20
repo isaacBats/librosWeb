@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<title>Manejando Eventos con SJ</title>
+	<meta charset="utf-8">
+	<script type="text/javascript">
+		window.onload = function() {
+  			document.onkeyup = muestraInformacion;
+  			document.onkeypress = muestraInformacion;
+  			document.onkeydown = muestraInformacion;
+		}
+ 
+		function muestraInformacion(elEvento) {
+		  var evento = window.event || elEvento;
+		 
+		  var mensaje = "Tipo de evento: " + evento.type + "<br>" +
+		                "Propiedad keyCode: " + evento.keyCode + "<br>" +
+		                "Propiedad charCode: " + evento.charCode + "<br>" +
+		                "Carácter pulsado: " + String.fromCharCode(evento.charCode);
+		 
+		  info.innerHTML += "<br>--------------------------------------<br>" + mensaje
+		 //console.log(elEvento);
+		}
+		//alert("EStoy dentro");
+
+		// El siguiente código de JavaScript permite obtener de forma correcta en cualquier navegador el carácter correspondiente a la tecla pulsada:
+
+		// function manejador(elEvento) {
+  // 			var evento = elEvento || window.event;
+  // 			var caracter = evento.charCode || evento.keyCode;
+  // 			alert("El carácter pulsado es: " + String.fromCharCode(caracter));
+		// }
+ 
+		// document.onkeypress = manejador;
+
+
+		//Con esta funcion detectas el movimiento del raton.
+		// function muestraInformacion(elEvento) {
+		//   var evento = elEvento || window.event;
+		//   var coordenadaX = evento.clientX;
+		//   var coordenadaY = evento.clientY;
+		//   alert("Has pulsado el ratón en la posición: " + coordenadaX + ", " + coordenadaY);
+		// }
+		 
+		// document.onclick = muestraInformacion;
+
+		/*
+			Detecta navegador y da las coordenadas del mouse.
+			// Detectar si el navegador es Internet Explorer
+			var ie = navigator.userAgent.toLowerCase().indexOf('msie')!=-1;
+			 
+			if(ie) {
+			  coordenadaX = evento.clientX + document.body.scrollLeft;
+			  coordenadaY = evento.clientY + document.body.scrollTop;
+			}
+			else {
+			  coordenadaX = evento.pageX;
+			  coordenadaY = evento.pageY;
+			}
+			alert("Has pulsado el ratón en la posición: " + coordenadaX + ", " + coordenadaY + " respecto de la página web");
+		*/
+
+	</script>
+</head>
+<body>
+	<h1>Información sobre el techado.</h1>
+	<p>Preciona una tecla.</p>
+	<div id="info"></div>
+</body>
+</html>
